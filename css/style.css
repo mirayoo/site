@@ -970,6 +970,15 @@ p.footer-subtitle {
    margin-right: 8px;
 }
 
+@media screen and (max-width: 991px) {
+    .benefits {
+        margin-bottom: 32px;
+    }
+    .product-items .col-lg-7 {
+        padding-right: 0;
+    }
+}
+
 .product-items .right-block {
     border-style: solid;
     border-width: 1px;
@@ -1098,7 +1107,7 @@ p.footer-subtitle {
 }
 .product-items .right-block .delivery {
     display: flex;
-    padding: 22px 20px;
+    padding: 18px 20px;
     align-items: center;
     justify-content: space-between;
 }
@@ -1149,6 +1158,44 @@ table.prod-table tr td:last-child {
     text-decoration: none;
 }
 
+/* Next Prev button proper display */
+
+@media screen and (max-width: 1002px) {
+    .gallery-button-next,
+    .gallery-button-prev {
+        top: 50%;
+    }
+}
+@media screen and (min-width: 1003px) and (max-width: 1069px) {
+    .gallery-button-next,
+    .gallery-button-prev {
+        top: 54%;
+    }
+}
+@media screen and (min-width: 1070px) and (max-width: 1084px) {
+    .gallery-button-next,
+    .gallery-button-prev {
+        top: 59%;
+    }
+}
+@media screen and (min-width: 1085px) and (max-width: 1100px) {
+    .gallery-button-next,
+    .gallery-button-prev {
+        top: 62%;
+    }
+}
+@media screen and (min-width: 1101px) and (max-width: 1117px) {
+    .gallery-button-next,
+    .gallery-button-prev {
+        top: 65%;
+    }
+}
+@media screen and (min-width: 1118px) and (max-width: 1164px) {
+    .gallery-button-next,
+    .gallery-button-prev {
+        top: 70%;
+    }
+}
 /* Technique */
 
 .swiper-overflow {
@@ -1446,19 +1493,33 @@ table.prod-table tr td:last-child {
 
 /* Content List */ 
 
-ul.content-list {
-    list-style-type: none;
+ul.contentList {
+    padding-left: 0;
 }
-ul.content-list li {
+ul.contentList li {
     font-size: 14px;
+    list-style-type: none;
+    padding-bottom: 12px;
 }
-ul.content-list a {
+ul.contentList a {
     color: #007dc1;
-}
-ul.content-list a:hover {
     text-decoration: none;
 }
+ul.contentList li img {
+    margin-right: 22px;
+}
+ul.contentList a:hover,
+ul.contentList a.active {
+    text-decoration: underline;
+}
 
+.tab-content__item {
+    display: none;
+ }
+
+ .tab-content__item.active {
+    display: block;
+ }
 
 /* PREVENT BUTTON SELECT ON DOUBLE CLICK */
 
@@ -1476,7 +1537,9 @@ ul.content-list a:hover {
 }
 
 /* Counter */
-
+.tech-list {
+    margin-top: 80px;
+}
 .tech-list .number {
 	display: flex;
     justify-content: center;
@@ -1542,6 +1605,28 @@ ul.content-list a:hover {
     display: none;
   }
 
+@media screen and (max-width:417px) {
+    .benefits {
+        display: block;
+        margin-left: 20%;
+    }
+    .benefits .d-flex {
+        margin-bottom: 20px;
+    }
+    .product-items .right-block .item-cart {
+        display: block;
+        text-align: -webkit-center;
+    }
+    .product-items .right-block .item-cart .btn-danger {
+        justify-content: center;
+        width: 100%;
+        margin-top: 20px;
+    }
+    .product-items .right-block .item-price {
+        padding: 18px 8px;
+    }
+}
+
 @media screen and (max-width:768px) {
     .advantages .row {
         margin-left: auto;
@@ -1567,6 +1652,24 @@ ul.content-list a:hover {
     .gallery-button-prev {
         top: 77%;
     }
+    table.prod-table {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1124px) {
+    .product-items .right-block .item-cart {
+        display: block;
+        text-align: -webkit-center;
+    }
+    .product-items .right-block .item-cart .btn-danger {
+        justify-content: center;
+        width: 100%;
+        margin-top: 20px;
+    }
+    .product-items .right-block .item-price {
+        padding: 18px 8px;
+    }
 }
 @media screen and (max-width:1186px) {
     .swiper-button-prev,
@@ -1584,4 +1687,25 @@ ul.content-list a:hover {
         margin-left: 0;
     }
 
+}
+
+@media screen and (min-width: 686px) and (max-width: 991px) {
+    .contentList.desktop {
+        display: none;
+    }
+    .mobileList {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+}
+@media screen and (max-width: 685px) {
+    .mobileList {
+        display: none;
+    }
+}
+@media screen and (min-width: 992px) {
+    .mobileList {
+        display: none;
+    }
 }
